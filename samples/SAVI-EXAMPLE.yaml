@@ -1,0 +1,24 @@
+proof_id: SAVI-2025-09-03-001
+date_utc: 2025-09-03T00:00:00Z
+build:
+  image_sha256: "sha256:example"
+runtime:
+  environment: "sealed appliance / TEE"
+  attestation_ref: "attest:example"
+data:
+  inputs_ref: "challenge_set_v1 (public subset)"
+  inputs_hashes: []
+  nonce: "example-nonce"
+eval:
+  protocols:
+    - name: "DSHM-orchestration"
+      metrics: ["latency_ms","hop_count","success_rate","hallucination_pct","tokens"]
+witnesses: []
+audit_log:
+  merkle_root: "0xexample"
+anchors:
+  ipic_txid: "0xexample"
+  git_tag: "SAVI_proof_example"
+artifacts:
+  video_capture: ""
+  run_bundle: ""
